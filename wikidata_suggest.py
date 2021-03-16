@@ -53,7 +53,7 @@ def suggest(orig_name):
         print(Style.RESET_ALL)
 
         try:
-            choice = raw_input("Choice: ")
+            choice = input("Choice: ")
         except EOFError:
             print
             return None
@@ -67,7 +67,7 @@ def suggest(orig_name):
         elif wp_sug and choice[0] == "W": 
             name = wp_sug
         elif choice[0] == "O":
-            name = raw_input("Lookup: ")
+            name = input("Lookup: ")
         elif choice[0] == "N":
             cache[orig_name] = None
             cache[name] = None
