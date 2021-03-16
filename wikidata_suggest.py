@@ -22,6 +22,9 @@ def suggest(orig_name):
 
     init()
 
+    if '(' in name:
+        name = name.split('(')[0].strip()
+
     while True:
 
         print
